@@ -3,7 +3,7 @@
         <a routerLink="/">Blog's admin page</a> <!-- go to the main non-admin page-->
     </h1>
 
-    <ul>
+    <ul *ngIf="auth.isAuthenticated()"> <!--if the admin logged in then the navbar with the buttons is showed, otherwise it is hidden-->
         <li routerLinkActive="active">
         <a [routerLink]="['/admin', 'dashboard']">Main</a>
     </li>
