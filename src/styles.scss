@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 :root {
-  --primary-color: #dc3545;
+  --primary-color: #a4c3af;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -18,7 +18,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: rgba(149, 171, 155, 0.14);
   color: #333;
 }
 
@@ -28,7 +28,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: #666;
+    color: #3c6652;
   }
 }
 
