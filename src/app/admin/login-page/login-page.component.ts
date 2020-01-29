@@ -19,16 +19,21 @@ export class LoginPageComponent implements OnInit {
       public auth: AuthService,
       private router: Router,
       private route: ActivatedRoute,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
 
       this.route.queryParams.subscribe((params: Params) => {
           if (params.loginAgain) {
               this.message = 'Please fill in the required fields:';
+          } else if (params.authFailed) {
+              this.message = 'Your session expired';
           }
-      })
-      this.form = new FormGroup({ // initialize the variable
+      });
+
+      // initialize the variable
+      this.form = new FormGroup({
       email: new FormControl(null, [
           Validators.required,
           Validators.email
@@ -38,7 +43,7 @@ export class LoginPageComponent implements OnInit {
           Validators.minLength(6)
       ]),
     });
-  }
+}
 submit() {
   if (this.form.invalid) {
     return;
