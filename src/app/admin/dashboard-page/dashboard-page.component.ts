@@ -10,7 +10,7 @@ import {PostsService} from '../../shared/posts.service';
 })
 export class DashboardPageComponent implements OnInit, OnDestroy {
 
-  posts: Post[];
+  posts: Post[] = [];
   pSub: Subscription;
 
   constructor(private postsService: PostsService) { }
