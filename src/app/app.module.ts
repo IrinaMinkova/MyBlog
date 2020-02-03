@@ -11,6 +11,12 @@ import {SharedModule} from './shared/shared.module';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AuthInterceptor} from './shared/auth.interceptor';
 
+import {registerLocaleData} from '@angular/common';
+import seLocale from '@angular/common/locales/sv';
+
+
+registerLocaleData(seLocale, 'sv'); // date format set
+
 const INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
   multi: true,
