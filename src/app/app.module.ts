@@ -15,6 +15,7 @@ import {registerLocaleData} from '@angular/common';
 import seLocale from '@angular/common/locales/sv';
 
 
+
 registerLocaleData(seLocale, 'sv'); // date format set
 
 const INTERCEPTOR_PROVIDER: Provider = {
@@ -34,7 +35,7 @@ const INTERCEPTOR_PROVIDER: Provider = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent]
