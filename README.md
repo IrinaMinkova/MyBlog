@@ -6,3 +6,6 @@ Technologies:
 * Angular 8
 * ngx-quill module
 * Firebase
+
+Tools:
+* WebStorm
